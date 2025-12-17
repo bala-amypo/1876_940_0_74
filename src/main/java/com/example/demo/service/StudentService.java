@@ -1,4 +1,9 @@
-package com.example.aiml.service;
-public class StudentService{
-    
+package com.example.demo.service;
+
+import com.example.demo.entity.Student;
+
+
+public interface StudentService{
+      Student saveStudent(Student student); 
+      
 }
