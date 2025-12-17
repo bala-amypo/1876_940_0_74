@@ -3,16 +3,16 @@ package com.example.demo.entity;
 @entity
 @Table`
 public class Student {
-    private long id ;
+    private Long id ;
     private String name;
     private String email;
     
     
-    public void setId(int id){
+    public void setId(Long id){
         this.id=id;
 
     }
-    public int getId() {
+    public Long getId() {
         return id;
         
     }
@@ -29,7 +29,7 @@ public class Student {
         this.email = email;
     }
     
-    public Student(int id, String name, String email) {
+    public Student(Long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
