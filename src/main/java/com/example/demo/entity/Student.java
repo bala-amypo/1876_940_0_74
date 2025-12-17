@@ -1,8 +1,9 @@
 package com.example.demo.entity;
 
-
+@entity
+@Table`
 public class Student {
-    private int id ;
+    private long id ;
     private String name;
     private String email;
     
