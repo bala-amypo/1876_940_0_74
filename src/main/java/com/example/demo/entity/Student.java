@@ -7,13 +7,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
 public class Student {
-    @Id
+       @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
+    @NotBlank(message = "Name filed cannot be empty")
+    @Size(min=3,max=20,message = "The user name must be min of 3 and max of 20 character")
     private String name;
+    @Email(message = "Invalid email id")
+    @Column(unique = true)
     private String email;
-    
-    
+    //@NotNull
+    //@Size(min,max)
+    //@min
+    //@max
+    //@pattern(reg)
     public void setId(Long id){
         this.id=id;
 
