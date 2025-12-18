@@ -19,7 +19,7 @@ public class StudentController {
     }
     @Getmapping("/add")
     public List<Student> getdata(){
-        return 
+        return StudentService.get
     }
 
 
