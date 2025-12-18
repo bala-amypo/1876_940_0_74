@@ -1,13 +1,18 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+//import jakarta.persistence.Table;
 @Entity
+//@Table(name="StudentTable")
 public class Student {
-       @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
     @NotBlank(message = "Name filed cannot be empty")
@@ -21,6 +26,9 @@ public class Student {
     //@min
     //@max
     //@pattern(reg)
+
+    
+    
     public void setId(Long id){
         this.id=id;
 
